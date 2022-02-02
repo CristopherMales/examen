@@ -18,8 +18,12 @@ public:
     InMaCo(QWidget *parent = nullptr);
     ~InMaCo();
     Datos dt;
+    QList<Datos*> l_datos;
+    void calcular();
+
 private slots:
     void on_Registro();
+    void cargarDatos();
 
 private:
     Ui::InMaCo *ui;
