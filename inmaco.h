@@ -6,6 +6,9 @@
 #include <QTextStream>
 #include "datos.h"
 
+#include <QMessageBox>
+#include <QFileDialog>
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class InMaCo; }
 QT_END_NAMESPACE

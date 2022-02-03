@@ -19,24 +19,8 @@
      <family>Sitka</family>
     </font>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_3">
-    <item>
-     <widget class="QLabel" name="label_4">
-      <property name="font">
-       <font>
-        <family>Sitka</family>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>IMC</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="1" column="0">
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
        <string>Datos</string>
@@ -109,7 +93,11 @@
             </widget>
            </item>
            <item>
-            <widget class="QDoubleSpinBox" name="inputPeso"/>
+            <widget class="QDoubleSpinBox" name="inputPeso">
+             <property name="maximum">
+              <double>599.990000000000009</double>
+             </property>
+            </widget>
            </item>
           </layout>
          </item>
@@ -191,9 +179,93 @@
            </item>
           </layout>
          </item>
+         <item>
+          <widget class="QSlider" name="slidericm">
+           <property name="minimum">
+            <number>15</number>
+           </property>
+           <property name="maximum">
+            <number>40</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="invertedControls">
+            <bool>false</bool>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksBelow</enum>
+           </property>
+           <property name="tickInterval">
+            <number>2</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lblicm">
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="midLineWidth">
+            <number>0</number>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_15">
+           <item>
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>Altura:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lblaltura"/>
+           </item>
+          </layout>
+         </item>
         </layout>
        </item>
       </layout>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QLabel" name="label_4">
+      <property name="sizeIncrement">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Sitka</family>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>IMC</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="path">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
      </widget>
     </item>
    </layout>
